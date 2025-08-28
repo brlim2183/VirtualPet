@@ -7,6 +7,7 @@ fill(140,120,100);
 }
 void draw(){
   //more of your code here
+fill(140,120,100);
 arc(200,80,190,190,0,PI);
 ellipse(165,145,100,130);
 ellipse(235,145,100,130);
