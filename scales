@@ -1,0 +1,32 @@
+void setup() {
+   size(400, 400);
+}
+
+void draw() {
+  background(200);
+boolean shift = true;
+for(int y = 400; y>= -50; y-= 17){
+  for(int x = 390; x >=-10; x -= 43){
+    if(shift == true)
+      scale(x-23, y);
+    else 
+      scale(x, y);
+    }
+  if(shift == true)
+    shift = false;
+  else
+    shift = true;
+  }
+}
+void scale(int x, int y) {
+  noStroke();
+  int s = 0;
+  int z = 225;
+  while(s<=30 && z>=100){
+     fill (z,0,255);
+          z = z - 25;
+     ellipse(x+20,y+20,40-s,40-s);
+     rect(x+(s/2),y+(s/2)*1.1,40-s,20-s);
+          s = s + 5;
+      }  
+}
